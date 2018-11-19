@@ -1,0 +1,370 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C1
+U 1 1 5BCBD245
+P 5000 3000
+F 0 "C1" H 5115 3046 50  0000 L CNN
+F 1 "C" H 5115 2955 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 5038 2850 50  0001 C CNN
+F 3 "~" H 5000 3000 50  0001 C CNN
+	1    5000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0101
+U 1 1 5BCBD2F2
+P 5200 2650
+F 0 "#PWR0101" H 5200 2500 50  0001 C CNN
+F 1 "VDD" H 5217 2823 50  0000 C CNN
+F 2 "" H 5200 2650 50  0001 C CNN
+F 3 "" H 5200 2650 50  0001 C CNN
+	1    5200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2850 5000 2650
+Wire Wire Line
+	5000 2650 5200 2650
+Wire Wire Line
+	5350 2650 5350 3050
+Connection ~ 5200 2650
+Wire Wire Line
+	5200 2650 5350 2650
+$Comp
+L power:VSS #PWR0102
+U 1 1 5BCBD3CB
+P 5000 3150
+F 0 "#PWR0102" H 5000 3000 50  0001 C CNN
+F 1 "VSS" H 5018 3323 50  0000 C CNN
+F 2 "" H 5000 3150 50  0001 C CNN
+F 3 "" H 5000 3150 50  0001 C CNN
+	1    5000 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VSS #PWR0103
+U 1 1 5BCBD3E5
+P 5350 4500
+F 0 "#PWR0103" H 5350 4350 50  0001 C CNN
+F 1 "VSS" H 5368 4673 50  0000 C CNN
+F 2 "" H 5350 4500 50  0001 C CNN
+F 3 "" H 5350 4500 50  0001 C CNN
+	1    5350 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 3650 4450 3650
+Wire Wire Line
+	4750 3750 4600 3750
+Wire Wire Line
+	4750 3850 4650 3850
+$Comp
+L MCU_Microchip_PIC12:PIC12F675-IMC U2
+U 1 1 5BCBD5C9
+P 6600 2650
+F 0 "U2" H 6600 3428 50  0000 C CNN
+F 1 "PIC12F675-IMC" H 6600 3337 50  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 7200 3300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf" H 6600 2650 50  0001 C CNN
+	1    6600 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2550 6000 2100
+Wire Wire Line
+	6000 2100 4450 2100
+Wire Wire Line
+	4450 2100 4450 3650
+Connection ~ 4450 3650
+Wire Wire Line
+	4450 3650 4300 3650
+Wire Wire Line
+	5650 2650 5650 2200
+Wire Wire Line
+	4600 2200 4600 3750
+Wire Wire Line
+	5650 2650 6000 2650
+Wire Wire Line
+	4600 2200 5650 2200
+Connection ~ 4600 3750
+Wire Wire Line
+	4650 3850 4650 2250
+Wire Wire Line
+	4650 2250 5550 2250
+Wire Wire Line
+	5550 2250 5550 2750
+Wire Wire Line
+	5550 2750 6000 2750
+Connection ~ 4650 3850
+Wire Wire Line
+	7600 3650 7600 2550
+Wire Wire Line
+	7600 2550 7400 2550
+Wire Wire Line
+	7200 2650 7500 2650
+Wire Wire Line
+	7500 2650 7500 3750
+Wire Wire Line
+	7400 3850 7400 2750
+Wire Wire Line
+	7400 2750 7200 2750
+Wire Wire Line
+	5350 4500 5350 4400
+Wire Wire Line
+	6600 4400 6600 3250
+Connection ~ 5350 4400
+Wire Wire Line
+	5350 4400 5350 4350
+Wire Wire Line
+	5350 2650 5350 1750
+Wire Wire Line
+	5350 1750 5750 1750
+Wire Wire Line
+	6600 1750 6600 2050
+Connection ~ 5350 2650
+$Comp
+L Connector:Conn_01x05_Female J1
+U 1 1 5BCBF81A
+P 8850 2200
+F 0 "J1" H 8877 2226 50  0000 L CNN
+F 1 "Conn_01x05_Female" H 8877 2135 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 8850 2200 50  0001 C CNN
+F 3 "~" H 8850 2200 50  0001 C CNN
+	1    8850 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 2000 8000 2000
+Wire Wire Line
+	8000 2100 8650 2100
+Wire Wire Line
+	8650 2200 8000 2200
+Wire Wire Line
+	8000 2300 8250 2300
+Wire Wire Line
+	8650 2400 8550 2400
+Text GLabel 8000 2000 0    50   Input ~ 0
+MCLR
+Text GLabel 8000 2100 0    50   Input ~ 0
+VDD
+Text GLabel 8000 2200 0    50   Input ~ 0
+VSS
+Text GLabel 8000 2300 0    50   Input ~ 0
+PGD
+Text GLabel 8000 2400 0    50   Input ~ 0
+PGC
+Text GLabel 7600 2550 2    50   Input ~ 0
+MCLR
+Text GLabel 5800 2100 1    50   Input ~ 0
+PGD
+Text GLabel 5800 2650 1    50   Input ~ 0
+PGC
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 5BCC1829
+P 6400 3850
+F 0 "J3" H 6373 3730 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 6373 3821 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 6400 3850 50  0001 C CNN
+F 3 "~" H 6400 3850 50  0001 C CNN
+	1    6400 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5BCC1937
+P 4100 3650
+F 0 "J2" H 4206 3928 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 4206 3837 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 4100 3650 50  0001 C CNN
+F 3 "~" H 4100 3650 50  0001 C CNN
+	1    4100 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3050 6100 3050
+Wire Wire Line
+	6100 3050 6100 3550
+Connection ~ 5350 3050
+Wire Wire Line
+	5350 3050 5350 3150
+Wire Wire Line
+	4600 3750 4300 3750
+Wire Wire Line
+	4650 3850 4300 3850
+Wire Wire Line
+	4350 4400 5350 4400
+Wire Wire Line
+	4300 3550 4350 3550
+Wire Wire Line
+	4350 3550 4350 4400
+Connection ~ 6200 3850
+Wire Wire Line
+	6200 3850 7400 3850
+Connection ~ 6200 3750
+Wire Wire Line
+	6200 3750 7500 3750
+Connection ~ 6200 3650
+Wire Wire Line
+	6200 3650 7600 3650
+$Comp
+L MCU_Microchip_PIC12:PIC12F675-IMC U1
+U 1 1 5BCBD18E
+P 5350 3750
+F 0 "U1" H 5350 4528 50  0000 C CNN
+F 1 "PIC12F675-IMC" H 5350 4437 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5950 4400 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf" H 5350 3750 50  0001 C CNN
+	1    5350 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3950 6000 3950
+Wire Wire Line
+	6000 3550 6100 3550
+Wire Wire Line
+	5950 3850 6200 3850
+Wire Wire Line
+	5950 3750 6200 3750
+Wire Wire Line
+	5950 3650 6200 3650
+Wire Wire Line
+	6000 3550 6000 3950
+Wire Wire Line
+	5350 4400 6300 4400
+$Comp
+L Connector:Conn_01x06_Female J4
+U 1 1 5BCCE515
+P 6800 4600
+F 0 "J4" H 6827 4576 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 6827 4485 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 6800 4600 50  0001 C CNN
+F 3 "~" H 6800 4600 50  0001 C CNN
+	1    6800 4600
+	1    0    0    -1  
+$EndComp
+Connection ~ 6600 4400
+Wire Wire Line
+	6600 4500 6500 4500
+Wire Wire Line
+	6500 4500 6500 4400
+Connection ~ 6500 4400
+Wire Wire Line
+	6500 4400 6600 4400
+Wire Wire Line
+	6600 4600 6450 4600
+Wire Wire Line
+	6450 4600 6450 4400
+Connection ~ 6450 4400
+Wire Wire Line
+	6450 4400 6500 4400
+Wire Wire Line
+	6600 4700 6400 4700
+Wire Wire Line
+	6400 4700 6400 4400
+Connection ~ 6400 4400
+Wire Wire Line
+	6400 4400 6450 4400
+Wire Wire Line
+	6300 4900 6300 4400
+Wire Wire Line
+	6300 4900 6600 4900
+Connection ~ 6300 4400
+Wire Wire Line
+	6300 4400 6350 4400
+Wire Wire Line
+	6600 4800 6350 4800
+Wire Wire Line
+	6350 4800 6350 4400
+Connection ~ 6350 4400
+Wire Wire Line
+	6350 4400 6400 4400
+$Comp
+L Connector:Conn_01x06_Female J5
+U 1 1 5BCD38A1
+P 5950 1550
+F 0 "J5" V 5890 1162 50  0000 R CNN
+F 1 "Conn_01x06_Female" V 5799 1162 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 5950 1550 50  0001 C CNN
+F 3 "~" H 5950 1550 50  0001 C CNN
+	1    5950 1550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6250 1750 6600 1750
+Wire Wire Line
+	5750 1750 5850 1750
+Connection ~ 5750 1750
+Wire Wire Line
+	5950 1750 5850 1750
+Connection ~ 5850 1750
+Connection ~ 5950 1750
+Wire Wire Line
+	5950 1750 6050 1750
+Wire Wire Line
+	6150 1750 6050 1750
+Connection ~ 6050 1750
+Wire Wire Line
+	6150 1750 6250 1750
+Connection ~ 6150 1750
+Connection ~ 6250 1750
+Wire Wire Line
+	8550 2300 8650 2300
+$Comp
+L Device:R R3
+U 1 1 5BCDCB5D
+P 8400 2400
+F 0 "R3" V 8193 2400 50  0000 C CNN
+F 1 "R" V 8284 2400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8330 2400 50  0001 C CNN
+F 3 "~" H 8400 2400 50  0001 C CNN
+	1    8400 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 2400 8000 2400
+$Comp
+L Device:R R2
+U 1 1 5BCDCC12
+P 8400 2300
+F 0 "R2" V 8193 2300 50  0000 C CNN
+F 1 "R" V 8284 2300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8330 2300 50  0001 C CNN
+F 3 "~" H 8400 2300 50  0001 C CNN
+	1    8400 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BCDCC36
+P 7400 2400
+F 0 "R1" H 7330 2354 50  0000 R CNN
+F 1 "R" H 7330 2445 50  0000 R CNN
+F 2 "Resistors_SMD:R_0805" V 7330 2400 50  0001 C CNN
+F 3 "~" H 7400 2400 50  0001 C CNN
+	1    7400 2400
+	-1   0    0    1   
+$EndComp
+Connection ~ 7400 2550
+Wire Wire Line
+	7400 2550 7200 2550
+Wire Wire Line
+	6600 1750 7400 1750
+Wire Wire Line
+	7400 1750 7400 2250
+Connection ~ 6600 1750
+$EndSCHEMATC
