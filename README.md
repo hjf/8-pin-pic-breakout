@@ -1,6 +1,8 @@
 # 8-pin-pic-breakout
 Breakout board for 8-pin Microchip PIC devices (10/12/16 family), for SMD and DIP.
 
+![Render](https://i.imgur.com/06RZ8fx.jpg)
+
 ## What is this?
 This is a flexible breakout board for the 8-pin variants of PIC family devices. Most (all?) 8-pin PICs share the same pinout so it should be compatible with all of them. It has been designed with a PIC18F18313 in mind, but it should work perfectly with the classic PIC12F675. It's compatible with DIP and SOIC packages. Why would you need a breakout board for a DIP, you ask? Read on and you will find out!
 
